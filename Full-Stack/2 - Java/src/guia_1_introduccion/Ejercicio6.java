@@ -20,6 +20,8 @@ public class Ejercicio6 {
 		}
 		
 		
+		leer.close();
+		
 	}
 	
 }

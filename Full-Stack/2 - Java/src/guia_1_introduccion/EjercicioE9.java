@@ -31,7 +31,7 @@ public class EjercicioE9 {
         System.out.println("Cociente: " + contcoc);
         System.out.println("Residuo: " + residuo);
         	
-
+        leer.close();
         
 	}
 }

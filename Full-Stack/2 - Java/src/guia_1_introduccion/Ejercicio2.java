@@ -12,6 +12,10 @@ public class Ejercicio2 {
 		String nombre = leer.next();
 		System.out.println("Su nombre es: " + nombre);
 
+		
+		
+		
+		leer.close();
 	}
 
 }

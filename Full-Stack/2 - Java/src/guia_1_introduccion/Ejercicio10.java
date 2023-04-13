@@ -21,6 +21,8 @@ public class Ejercicio10 {
 		
 		System.out.println("El valor total de la suma de los valores ingresados es: " + suma + ". siendo el limite " + num);
 
+		
+		leer.close();
 	}
 
 }

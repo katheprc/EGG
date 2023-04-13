@@ -27,6 +27,8 @@ public class Ejercicio14 {
 				moneda = leer.nextLine();
 			}
 		}
+
+		leer.close();
 	}
 	
 	public static void conversor(int cant, String moneda) {

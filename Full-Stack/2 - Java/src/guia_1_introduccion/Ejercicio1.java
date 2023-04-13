@@ -15,6 +15,8 @@ public class Ejercicio1 {
 		int total = num1 + num2;
 		System.out.println("La suma de los numeros es: " + total);
 
+		
+		leer.close();
 	}
 
 }

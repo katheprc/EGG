@@ -32,6 +32,10 @@ public class EjercicioE8 {
 		System.out.println("Cantidad ingresada: " + aux);
 		System.out.println("Cantidad de numeros pares: " + auxpar);
 		System.out.println("Cantidad de numeros impares: " + (aux - auxpar));
+		
+		
+		leer.close();
+		
 	}
 
 }

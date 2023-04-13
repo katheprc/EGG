@@ -61,6 +61,9 @@ public class Ejercicio11 {
 		} while (opc != 5);
 		
 		System.out.println("Fin :D");
+		
+		
+		leer.close();
 	}
 		
 		

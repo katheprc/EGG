@@ -12,5 +12,12 @@ public class Ejercicio21ST {
         
         
         
+        
+        
+        
+        
+        
+        leer.close();
+        
 	}
 }

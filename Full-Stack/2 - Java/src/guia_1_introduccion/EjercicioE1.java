@@ -15,5 +15,11 @@ public class EjercicioE1 {
        System.out.println("Dias: " + (min / 60 / 24));
              
        
+       
+       
+       leer.close();
+       
+       
+       
 	}
 }

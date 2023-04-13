@@ -36,5 +36,8 @@ public class Ejercicio17 {
 		System.out.println("Cantidad de numeros con tres digitos: " + tresdig);	
 		System.out.println("Cantidad de numeros con cuatro digitos: " + cuatrodig);
 		System.out.println("Cantidad de numeros con cinco digitos: " + cincodig);
+
+
+		leer.close();
 	}
 }

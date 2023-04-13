@@ -14,6 +14,9 @@ public class Ejercicio4 {
 		
 		System.out.println(centi + "°C equivale a " + fahr + "°F");
 		
+		
+		
+		leer.close();
 	}
 	
 }

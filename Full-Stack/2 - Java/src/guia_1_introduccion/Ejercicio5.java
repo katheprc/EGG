@@ -13,6 +13,12 @@ public class Ejercicio5 {
 		System.out.println("Doble: " + (num*2));
 		System.out.println("Triple: " + (num*3));
 		System.out.println("Raiz cuadrada: " + (Math.sqrt(num)));
+		
+		
+		
+		leer.close();
+		
+		
 	}
 	
 }

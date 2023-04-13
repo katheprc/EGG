@@ -23,6 +23,9 @@ public class Ejercicio13 {
 			
 		}
 		
+		
+		leer.close();
+		
 	}
 }
 

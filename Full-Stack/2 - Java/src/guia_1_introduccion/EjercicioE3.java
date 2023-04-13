@@ -16,6 +16,12 @@ public class EjercicioE3 {
     	   System.out.println("La letra es consonante");
        }
        
+       
+       
+       
+       leer.close();
+       
+       
 	}
 	
 }

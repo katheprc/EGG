@@ -15,6 +15,9 @@ public class Ejercicio3 {
 		System.out.println("Mayusculas: " + frase.toUpperCase());
 		System.out.println("Minusculas: " + frase.toLowerCase());
 
+		
+		leer.close();
+		
 
 	}
 	

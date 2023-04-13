@@ -54,6 +54,10 @@ public class EjercicioE4 {
        }
 
        
+       
+       leer.close();
+       
+       
 	}
 	
 }

@@ -16,5 +16,12 @@ public class EjercicioE6 {
        
        System.out.println("El promedio entre todas las estaturas es: " + (promedio / cant));
          
+       
+       
+       
+       
+       leer.close();
+       
+       
      }
 }

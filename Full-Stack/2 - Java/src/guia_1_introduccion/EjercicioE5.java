@@ -33,5 +33,9 @@ public class EjercicioE5 {
                  System.out.println("El socio C tiene que abonar por el tartamiento la suma de: " + costo + " pesos.");
                  break;
          }
+         
+         
+         
+         leer.close();
 }
 }

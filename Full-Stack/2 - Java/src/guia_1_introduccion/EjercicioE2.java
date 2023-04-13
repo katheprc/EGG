@@ -31,5 +31,8 @@ public class EjercicioE2 {
        System.out.println(" ");
        System.out.println("Valor de A: " + a + ". Valor de b: " + b + ". Valor de C: " + c + ". Valor de D: " + d);
        
+       
+       leer.close();
+       
 	}
 }

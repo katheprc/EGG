@@ -65,5 +65,8 @@ public class Ejercicio20 {
 		
 		System.out.println(" ");
 		
+		
+		
+		leer.close();
 	}
 }

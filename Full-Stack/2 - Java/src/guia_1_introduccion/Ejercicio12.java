@@ -38,6 +38,8 @@ public class Ejercicio12 {
 		System.out.println("LECTURAS INCORRECTAS: " + incorr);
 		
 		
+		leer.close();
+		
 		
 	}
 

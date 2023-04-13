@@ -19,6 +19,12 @@ public class Ejercicio8 {
 			System.out.println("IMCORRECTO");
 		}
 		
+		
+		
+		
+		leer.close();
+		
+		
 	}
 	
 }

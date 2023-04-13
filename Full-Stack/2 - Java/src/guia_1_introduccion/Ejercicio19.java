@@ -17,12 +17,10 @@ public class Ejercicio19 {
 		}
 
 		System.out.println(" ");
-		boolean verif = true;
 		for (int aux = 0; aux < 3; aux++)  {
 			for (int aux2 = 0; aux2 < 3; aux2++) {
 				matriz2[aux][aux2] = matriz[aux2][aux];
 				if (matriz[aux][aux2] != (matriz2[aux][aux2])*(-1)) {
-					verif = false;
 					break;
 				}
 				System.out.print(matriz2[aux][aux2] + " ");
@@ -32,6 +30,10 @@ public class Ejercicio19 {
 		
 		System.out.println(" ");
 
+		
+		
+		leer.close();
+		
 		}
 		
 	}

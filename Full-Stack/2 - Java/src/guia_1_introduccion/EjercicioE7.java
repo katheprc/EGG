@@ -66,6 +66,9 @@ public class EjercicioE7 {
         System.out.println("Promedio: " + (prom/num));
         
         
+        
+        leer.close();
+        
     }
 }
 
