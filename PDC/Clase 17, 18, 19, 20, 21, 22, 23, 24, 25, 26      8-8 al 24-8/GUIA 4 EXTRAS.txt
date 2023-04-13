@@ -1,0 +1,41 @@
+RECORDAR TODO LO QUE VIMOS HASTA AHORA: ESTRUCTURAS DE CONTROL, SUBPROGRAMAS, ARREGLOS.
+
+· Crea un programa que pida una frase al usuario y diga cuantas palabras contiene. (Ayudita! los espacios podrían funcionar como advertencia para los cortes de palabras)
+
+· Crea un programa que pida al usuario su nombre y apellido y los muestre escritos de la forma correcta (Primera letra en mayúsculas, y el resto en minúscula. Siempre debemos pensar que el usuario puede ingresar los datos de una forma distinta a la que yo deseaba que lo hiciera)
+
+· Queremos realizar una encuesta a 6 personas, en esta encuesta:
+
+o Indicaremos el sexo 1= masculino, 2=femenino
+
+o sí trabaja 1=si trabaja 2=no trabaja
+
+o Su sueldo (que estará entre 600 y 2000, valor entero, siempre y cuando trabaje sino es 0)
+
+o Calcule y muestre:
+
+a) Porcentaje de hombres / porcentaje de mujeres
+
+b) Porcentaje de hombres que trabajan / porcentaje de mujeres que trabajan
+
+c) Sueldo promedio de los hombres que trabajan / sueldo promedio de las mujeres q trabajan
+
+· Crear una matriz 4X4 de números enteros que inicialmente esta vacía, realizar diversos subprogramas que nos permitan:
+
+o RELLENAR MATRIZ: Forma aleatoria números de 7 a 68.
+
+o MOSTRAR UNA FILA: Que sea elegida por el usuario.
+
+o SUMA DE UNA COLUMNA: Que sea elegida por el usuario.
+
+o SUMAR DIAGONAL PRINCIPAL Y DIAGONAL INVERSA.
+
+o CALCULAR LA MEDIA: De todos los valores de la matriz (promedio
+marca_de_verificación_blanca
+ojos
+manos_levantadas
+
+
+
+
+

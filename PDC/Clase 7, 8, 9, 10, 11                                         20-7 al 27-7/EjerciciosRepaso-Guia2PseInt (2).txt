@@ -1,0 +1,61 @@
+EJERCICIOS DE REPASO GUÍA 2
+
+1)Escribir un algoritmo que dados 2 valores de entrada imprima siempre la división del mayor por el menor.
+
+2)Dado un número de dos cifras, diseñe un algoritmo que permita obtener el número invertido. Ejemplo, si se introduce 23 que muestre 32.
+
+3)Diseñe un algoritmo que lea un número de tres cifras y determine si es o no capicúa.
+
+4)Pedir el nombre y los dos apellidos de una persona y mostrar las iniciales.
+
+5)Escribir un algoritmo que lea 3 números los cuales significan una fecha (día, mes, año). Comprobar que sea válida la fecha, si no es valido que imprima un mensaje de error, y si es válida imprimir el mes con su nombre.
+
+6)Realice un programa que calcule la nómina salarial neto, de unos obreros cuyo trabajo se paga en horas. El cálculo se realiza de la siguiente forma:
+
+- Las primeras 35 horas a una tarifa fija.
+
+- Las horas extras se pagan a 1.5 más de la tarifa fija.
+
+- Los impuestos a deducir de los trabajadores varian, segun el sueldo mensual si el sueldo es menos a $20,000.00 el sueldo es libre de impuesto y si es al contrario se cobrará un 20% de impuesto.
+
+7)Escribir un Pseudocódigo que encuentre y despliegue los números primos entre uno y cien.
+
+8)Hacer un Pseudocodigo que despliegue las tablas de multiplicar.
+
+9)Crea una aplicación que nos pida un día de la semana y que nos diga si es un dia laboral o no
+
+10)Cuenta la cantidad de vocales en forma independiente que se encuentren dentro de un texto introducido por el usuario
+
+11)Serie Gráfica Numérica
+Realizar un algoritmo que muestre la siguiente gráfica:
+999999999
+88888888
+7777777
+666666
+55555
+4444
+333
+22
+1
+
+12) Desarrolle un programa que permita leer un número entero mayor a 3 que representa la cantidad de filas y el programa imprima un triángulo con números de acuerdo al número de filas que se ingresa como dato. El triángulo se forma con números, dejando espacios en blanco al inicio de cada fila tal y como se muestra en los ejemplos:
+(*) El programa:
+
+• Debe validar el ingreso del número de filas. Dato mayor o igual a 3.
+• El triángulo tiene tantas filas como indica el dato de entrada, y la cantidad de números que se imprime en cada fila aumenta de dos en dos, en la primera fila hay un solo número, en la segunda fila hay 3 números, en la tercera fila hay 5 números y asi suscesivamente.
+• Los números que se imprimen en cada fila empieza en 1 y van hasta el 9, luego se imprime del cero, uno, dos y hasta el número que corresponda.
+EJEMPLOS 1 :
+
+Filas : 1
+Filas : 0
+Filas : -2
+Filas : 7
+
+            1
+           123
+          12345
+         1234567
+        123456789
+       12345678901
+      1234567890123
+

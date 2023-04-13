@@ -1,0 +1,15 @@
+1. Implementar una función que permita obtener un número entero aleatorio comprendido entre dos límites que introduciremos por teclado. El número obtenido se debe mostrar por pantalla.
+
+2. Implementar una función que permita obtener el valor absoluto de un número y otra que obtenga la raíz cuadrada. Para ello utilice las funciones abs() y rc() de PseInt.
+
+3. Diseñar una función que permita obtener el máximo común divisor de dos números mediante el algoritmo de Euclides
+
+4. Dos números son amigos si cada uno de ellos es igual a la suma de los divisores del otro. Por ejemplo 220 y 284 son amigos ya que: Suma de divisores de 284= 1 + 2 + 4 + 71 + 142 = 220 Suma de divisores de 220 = 1 + 2 + 4 + 5 + 10 + 11 + 20 + 22 + 44 + 55 + 110 = 284 Diseñe un algoritmo que a través del uso de una función determine si dos números ingresados por el usuario son amigos o no
+
+5. Realizar un procedimiento que permita obtener la división entera y el resto de esta utilizando únicamente los operadores suma y resta. NOTA: La división se considera como una sucesión de restas. El algoritmo cuenta cuántas veces se puede restar el divisor al dividendo, siendo dicho contador el cociente. Cuando ya no se pueda restar más sin obtener un número positivo, se obtendrá el resto
+
+6. Diseñar un procedimiento que permita convertir coordenadas polares (radio, ángulo) en cartesianas (x,y). NOTA: x=radio*cos(ángulo) e y=radio*sen(ángulo).
+
+7. Crea un programa que pida el nombre al usuario y lo escriba al revés (de la última letra a la primera).
+
+8. Crea un programa que pida el nombre al usuario y lo escriba alternando mayúsculas y minúsculas
