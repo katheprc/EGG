@@ -6,7 +6,7 @@ public class Cafetera {
 	int proporcionAguaXGr = 18;
 	double cant;
 
-	public Cafetera() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+	public Cafetera() {
 	}
 
 	public Cafetera(double capacidadMaxima, double cant, double cantidadActual) {
@@ -42,6 +42,5 @@ public class Cafetera {
 	public int getProporcionAguaXGr() {
 		return proporcionAguaXGr;
 	}
-	
-	
+
 }
