@@ -8,7 +8,10 @@ public class Ejercicio6_main {
 	public static void main(String[] args) {
 		
 		ServiceCafetera srvNespresso = new ServiceCafetera();
-		Cafetera nespresso = srvNespresso.
+		Cafetera nespresso = new Cafetera();
+		
+		srvNespresso.agregarCafe(nespresso);
+		
 		
 
 	}
