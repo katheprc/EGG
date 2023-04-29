@@ -1,18 +1,22 @@
 package Ejercicio8.Entity;
 
 public class Cadena {
-	String frase, invertida;
-	int longitud, vocales;
+	String frase, invertida, car, reemplazado;
+
+	int longitud, vocales, encontrado;
 	
 
 	public Cadena() {
 	}
 
-	public Cadena(String frase, int vocales, int longitud, String invertida) {
+	public Cadena(String frase, String car, String reemplazado, int encontrado, int vocales, int longitud, String invertida) {
 		this.frase = frase;
 		this.longitud = longitud;
 		this.vocales = vocales;
 		this.invertida = invertida;
+		this.encontrado = encontrado;
+		this.car = car;
+		this.reemplazado = reemplazado;
 	}
 
 	public String getFrase() {
@@ -46,5 +50,32 @@ public class Cadena {
 	public void setInvertida(String invertida) {
 		this.invertida = invertida;
 	}
+
+	public int getEncontrado() {
+		return encontrado;
+	}
+
+	public void setEncontrado(int encontrado) {
+		this.encontrado = encontrado;
+	}
+
+	public String getCar() {
+		return car;
+	}
+
+	public void setCar(String car) {
+		this.car = car;
+	}
+
+	public String getReemplazado() {
+		return reemplazado;
+	}
+
+	public void setReemplazado(String reemplazado) {
+		this.reemplazado = reemplazado;
+	}
+	
+	
+	
 	
 }
