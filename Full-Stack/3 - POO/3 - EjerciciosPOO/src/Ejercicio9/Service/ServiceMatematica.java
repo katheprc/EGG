@@ -10,15 +10,9 @@ public class ServiceMatematica {
 		matematica.setNum2(Math.random()*100);
 		
 		System.out.println("El primer numero es: " + matematica.getNum1());
-		System.out.println("El segundo numero es: " + matematica.getNum2());
-		
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("El numero mayor es: " + devolverMayor(matematica));
-		System.out.println("");
-		System.out.println("El resultado de la potencia es: " + calcularPotencia(matematica));
-		System.out.println("");
+		System.out.println("El segundo numero es: " + matematica.getNum2()); System.out.println(""); System.out.println(""); System.out.println("");
+		System.out.println("El numero mayor es: " + devolverMayor(matematica)); System.out.println("");
+		System.out.println("El resultado de la potencia es: " + calcularPotencia(matematica)); System.out.println("");
 		System.out.println("El resultado de la raiz cuadrada del menor es: " + calcularRaiz(matematica));
 		
 	}
