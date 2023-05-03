@@ -33,13 +33,9 @@ public class Ejercicio11_main {
 		Date fechaActual = new Date();
 		
 		System.out.println("Fecha indicada: " + fecha.getDate() + " " +fecha.getMonth() + " " + fecha.getYear());
-		System.out.println("Fecha actual: " + fechaActual.getDate() + " " + fechaActual.getMonth() + " " + fechaActual.getYear());
+		System.out.println("Fecha actual: " + fechaActual.getDate() + " " + fechaActual.getMonth() + " " + (fechaActual.getYear() + 1900));
 		
-		System.out.println("Diferencia de años: " + (fechaActual.getYear()-fecha.getYear()));
-		
-		
-		
-		
+		System.out.println("Diferencia de años: " + (fechaActual.getYear() + 1900 - fecha.getYear()));
 		
 		leer.close();
 	}

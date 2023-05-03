@@ -141,12 +141,12 @@ public class Ejercicio7_main {
 					System.out.println("IMC:    " + persona3.getImc());
 					break;
 				case 4: 
-					System.out.println("Nombre: " + persona3.getNombre());
-					System.out.println("Edad:   " + persona3.getEdad());
-					System.out.println("Peso:   " + persona3.getPeso());
-					System.out.println("Altura: " + persona3.getAltura());
-					System.out.println("Sexo:   " + persona3.getSexo());
-					System.out.println("IMC:    " + persona3.getImc());
+					System.out.println("Nombre: " + persona4.getNombre());
+					System.out.println("Edad:   " + persona4.getEdad());
+					System.out.println("Peso:   " + persona4.getPeso());
+					System.out.println("Altura: " + persona4.getAltura());
+					System.out.println("Sexo:   " + persona4.getSexo());
+					System.out.println("IMC:    " + persona4.getImc());
 					break;
 			}
 			System.out.println("");
