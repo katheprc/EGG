@@ -51,10 +51,10 @@ public class Ejercicio1_main {
 					}
 						
 				} while (true);	
+				
 			}
 
 		} while (opc.equalsIgnoreCase("s"));
-		
 		
 		System.out.println("");System.out.println("");System.out.println("");
 		
@@ -62,6 +62,7 @@ public class Ejercicio1_main {
 		razas.forEach(System.out::println);  
 				
 		leer.close();
+		
 	}
 		
 }
