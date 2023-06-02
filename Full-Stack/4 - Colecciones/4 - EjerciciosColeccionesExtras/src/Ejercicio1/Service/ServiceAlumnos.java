@@ -23,6 +23,12 @@ public class ServiceAlumnos {
 		System.out.println("1 - Alta");
 		System.out.println("2 - Baja");
 		System.out.println("3 - Modificación");
+		System.out.println("4 - Mostrar alumno");
+		System.out.println("5 - Mostrar todos los alumnos");
+		System.out.println("6 - Mostrar y ordenar alumnos por apellido DESCENDENTE");
+		System.out.println("7 - Mostrar y ordenar alumnos por apellido ASCENDENTE");
+		System.out.println("8 - Mostrar edad de alumno");
+		System.out.println("9 - Reporte Final");
 		System.out.println("0 - Salir");
 		
 		System.out.println("Ingrese opción");
@@ -34,16 +40,18 @@ public class ServiceAlumnos {
 			case 1: crearLista(); break;
 			case 2: b(); break;
 			case 3: m(); break;
+			case 4: mostrarAlumno(); break;
+			case 5: mostrarTodo(); break;
+			case 6: ordenarApellidoDesc(); break;
+			case 7: ordenarApellidoAsc(); break;
+			case 8: mostrarEdad();
+			case 9: LOP();may25();cantidadNac(); break;
 			case 0: break;
 			default: System.out.println("Ingrese nuevamente opción");
 		}
 		
 		} while (opc != 0); 
-		
-		LOP();
-		may25();
-		cantidadNac();
-				
+						
 	}
 
 	public void crearLista() {
@@ -249,7 +257,7 @@ public class ServiceAlumnos {
 		
 	}
 	
-	public int LOP() {
+	public void LOP() {
 		
 		int cant = 0;
 			
@@ -259,10 +267,10 @@ public class ServiceAlumnos {
 				}
 			}
 		
-		return cant;
+		System.out.println("Cantidad de alumnos que sus apellidos comienzan con L o P: " + cant);
 	}
 	
-	public int may25() {
+	public void may25() {
 		
 		Date fecha = new Date();
 		int cant = 0;
@@ -280,9 +288,7 @@ public class ServiceAlumnos {
 			}
 		}
 		
-		
-		return cant;
-		
+		System.out.println("Cantidad de alumnos mayores de 25: " + cant);
 		
 	}
 

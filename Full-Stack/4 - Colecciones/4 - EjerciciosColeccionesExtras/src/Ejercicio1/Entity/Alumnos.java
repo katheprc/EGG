@@ -1,9 +1,7 @@
 package Ejercicio1.Entity;
 
-import java.util.Comparator;
+import java.util.*;
 import java.util.Date;
-
-import Ejercicio4.Entity.Pelicula;
 
 public class Alumnos {
 
