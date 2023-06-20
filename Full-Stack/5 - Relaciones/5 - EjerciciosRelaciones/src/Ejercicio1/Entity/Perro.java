@@ -1,0 +1,44 @@
+package Ejercicio1.Entity;
+
+public class Perro {
+
+	String nombre, raza, tamano;
+	int edad;
+	
+	public Perro() {
+		super();
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getRaza() {
+		return raza;
+	}
+	
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+	
+	public String getTamano() {
+		return tamano;
+	}
+	
+	public void setTamano(String tamano) {
+		this.tamano = tamano;
+	}
+	
+	public int getEdad() {
+		return edad;
+	}
+	
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+		
+}
