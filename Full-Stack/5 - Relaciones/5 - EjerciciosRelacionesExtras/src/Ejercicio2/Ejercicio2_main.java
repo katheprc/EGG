@@ -29,6 +29,16 @@ cada asiento o solo las X y espacios vacíos.*/
 
 package Ejercicio2;
 
-public class Ejercicio2_main {
+import Ejercicio2.Service.*;
 
+public class Ejercicio2_main {
+	
+	public static void main(String[] args) {
+	
+		ServiceCine srvCine = new ServiceCine();
+		
+		srvCine.menu();
+		
+	}
+	
 }
