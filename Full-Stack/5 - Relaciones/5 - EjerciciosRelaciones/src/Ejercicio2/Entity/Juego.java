@@ -5,7 +5,6 @@ import java.util.*;
 public class Juego {
 	
 	HashMap<Integer, Jugador> listaJugadores = new HashMap<>();
-	RevolverDeAgua revolver;
 	
 	public void llenarJuego(Jugador jugador) {
 		
@@ -16,8 +15,6 @@ public class Juego {
 	public void ronda(RevolverDeAgua revolver) {
 		
 		Jugador jugador;
-		
-		this.revolver = revolver;
 		
 		for (int aux = 1 ; aux <= listaJugadores.size() ; aux++) {
 			
@@ -43,8 +40,6 @@ public class Juego {
 					aux = 0;
 				}
 			}
-			
-			
 			
 		}
 		

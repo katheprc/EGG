@@ -19,7 +19,7 @@ public class ServiceBarajaEspanola {
 			System.out.println("");
 			System.out.println("- - - M - E - N - Ú - - -");
 			System.out.println("");
-			System.out.println("1 - Barajar");
+			System.out.println("1 - Barajar (mezclar)");
 			System.out.println("2 - Siguiente Carta");
 			System.out.println("3 - Mostrar cantidad de cartas Disponibles");
 			System.out.println("4 - Dar x cantidad de cartas");
