@@ -5,7 +5,7 @@ package Ejercicio3.Entity;
 
 public class Vehiculo {
 	
-	String marca, modelo, ano, numMotor, chasis, color, tipo;
+	private String marca, modelo, ano, numMotor, chasis, color, tipo;
 
 	public Vehiculo() {
 	}

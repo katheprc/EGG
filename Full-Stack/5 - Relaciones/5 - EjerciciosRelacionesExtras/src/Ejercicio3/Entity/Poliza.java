@@ -12,13 +12,13 @@ import java.util.*;
 
 public class Poliza {
 	
-	Vehiculo vehiculo;
-	Cliente cliente;
-	Cuota cuota;
-	Date fechaInicio, fechaFin;
-	String tipoCobertura;
-	int numPoliza;
-	boolean incluyeGranizo;
+	private Vehiculo vehiculo;
+	private Cliente cliente;
+	private Cuota cuota;
+	private Date fechaInicio, fechaFin;
+	private String tipoCobertura;
+	private int numPoliza;
+	private boolean incluyeGranizo;
 	
 	public Poliza() {
 	}
@@ -91,5 +91,4 @@ public class Poliza {
 	public String toString() {
 		return "Poliza [vehiculo=" + vehiculo + ", cliente=" + cliente + ", cuota=" + cuota + ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", tipoCobertura=" + tipoCobertura + ", numPoliza=" + numPoliza + ", incluyeGranizo=" + incluyeGranizo + "]";
 	}
-	+9++99+9+9+9+9+iqruqweqwrouiweprouwqoiuquouiuuuuuuiiiioooooppppprrreewwwwwqqq7777799+++oweruipuuwepuioroiooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo888wqriuwioerwqiouruoiquweiouqweoiuqwioeuqwioueoqiwueoiuweeeeeeeeeeeeeeeeeeeeeeeeeuoriuewirowqqqqqqq
 }

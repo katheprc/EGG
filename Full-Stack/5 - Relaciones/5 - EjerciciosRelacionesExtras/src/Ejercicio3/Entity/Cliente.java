@@ -6,7 +6,7 @@ package Ejercicio3.Entity;
 
 public class Cliente {
 	
-	String nombre, apellido, dni, mail, domicilio, telefono;
+	private String nombre, apellido, dni, mail, domicilio, telefono;
 
 	public Cliente() {
 	}

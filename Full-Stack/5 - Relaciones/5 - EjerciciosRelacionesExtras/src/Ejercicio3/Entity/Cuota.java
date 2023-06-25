@@ -9,10 +9,11 @@ import java.util.*;
 
 public class Cuota {
 	
-	String formaPago;
-	Date vencimiento;
-	int cantCuotas, numCuota, montoCuota, totalAsegurado, montoMaximoGranizo;
-	boolean pagada;
+	private String formaPago;
+	private Date vencimiento;
+	private int cantCuotas, numCuota, montoCuota, totalAsegurado, montoMaximoGranizo;
+	private boolean pagada;
+	private int cuotasPagadas;
 	
 	public Cuota() {
 	}
@@ -80,8 +81,15 @@ public class Cuota {
 	public void setPagada(boolean pagada) {
 		this.pagada = pagada;
 	}
+		
+	public int getCuotasPagadas() {
+		return cuotasPagadas;
+	}
 
-	
+	public void setCuotasPagadas() {
+		this.cuotasPagadas++;
+	}
+
 	@Override
 	public String toString() {
 		return "Cuota [formaPago=" + formaPago + ", vencimiento=" + vencimiento + ", cantCuotas=" + cantCuotas + ", numCuota=" + numCuota + ", montoCuota=" + montoCuota + ", totalAsegurado=" + totalAsegurado + ", montoMaximoGranizo=" + montoMaximoGranizo + ", pagada=" + pagada + "]";
