@@ -26,6 +26,16 @@ relaciones. */
 
 package Ejercicio3;
 
-public class Ejercicio3_main {
+import Ejercicio3.Service.*;
 
+public class Ejercicio3_main {
+	
+	public static void main(String[] args) {
+		
+		ServiceEmpresa srvEmp = new ServiceEmpresa();
+		
+		srvEmp.menu();
+		
+	}
+	
 }
