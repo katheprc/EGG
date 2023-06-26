@@ -1,6 +1,6 @@
-package Ejercicio2.Service;
+package Ejercicio3.Service;
 
-import Ejercicio2.Entity.*;
+import Ejercicio3.Entity.*;
 import java.util.*;
 
 public class ServiceElectrodomestico {
@@ -20,6 +20,7 @@ public class ServiceElectrodomestico {
 			System.out.println("1 - Crear lavarropa");
 			System.out.println("2 - Crear televisor");
 			System.out.println("3 - Ver electrodomesticos creados");
+			System.out.println("4 - Ver suma de precios de todo los electrodomesticos creados");
 			System.out.println("0 - Salir");
 			System.out.println("");
 			System.out.println("- - - - - - - - - - - - -");
@@ -40,6 +41,9 @@ public class ServiceElectrodomestico {
 				break;
 			case 3: 
 				verElectrodomesticos();
+				break;
+			case 4: 
+				mostrarSuma();
 				break;
 			case 0:
 				System.out.println("- - - A - D - I - O - H - - -");
@@ -110,4 +114,20 @@ public class ServiceElectrodomestico {
 		
 	}
 
+	public void mostrarSuma() {
+		
+		int suma = 0;
+		
+		for (Electrodomestico electrodomestico : listaElectrodomesticos) {
+			
+			suma += electrodomestico.getPrecio();
+			
+		}
+		
+		System.out.println("- - - - - - - - - - - - - - - - - - - - - - -");
+		System.out.println("La suma total de todo los precio es: $" + suma);
+		System.out.println("- - - - - - - - - - - - - - - - - - - - - - -");
+
+	}
+	
 }
