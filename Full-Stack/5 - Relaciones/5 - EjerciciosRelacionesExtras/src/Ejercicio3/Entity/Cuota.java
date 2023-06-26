@@ -30,8 +30,10 @@ public class Cuota {
 		return vencimiento;
 	}
 
-	public void setVencimiento(Date vencimiento) {
-		this.vencimiento = vencimiento;
+	public void setVencimiento(int dia, int mes, int ano) {
+		this.vencimiento.setDate(dia);
+		this.vencimiento.setMonth(mes);
+		this.vencimiento.setYear(ano);
 	}
 
 	public int getCantCuotas() {

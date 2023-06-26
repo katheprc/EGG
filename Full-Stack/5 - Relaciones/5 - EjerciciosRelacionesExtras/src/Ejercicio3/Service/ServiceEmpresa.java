@@ -13,6 +13,8 @@ public class ServiceEmpresa {
 
 	private int total = 100, terceros = 50, granizo = 10;
 
+	private Date hoy = new Date();
+	
 	public void menu() {
 
 		do {
@@ -180,7 +182,7 @@ public class ServiceEmpresa {
 		
 		cuota.setMontoMaximoGranizo(1000);
 		
-		cuota.setVencimiento
+		cuota.setVencimiento((hoy.getDate()+30), (hoy.getMonth()+1), hoy.getYear());
 		
 		return cuota;
 
