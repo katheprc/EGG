@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Lavarropa extends Electrodomestico{
 	
-	int carga;
+	private int carga;
 	
 	Scanner leer = new Scanner(System.in);
 	
@@ -12,11 +12,13 @@ public class Lavarropa extends Electrodomestico{
 	}
 	
 	public Lavarropa (int precio, double peso, String color, char consumo, int carga) {
+		
 		super(precio, peso, color, consumo);
 		
 		this.carga = carga;
-	}
 		
+	}
+
 	public int getCarga() {
 		return carga;
 	}
