@@ -49,7 +49,8 @@ public interface ServiceAlquileres {
 		Alquiler alquiler = new Alquiler();
 
 		int opc;
-		String matricula, eslora;
+		String matricula;
+		int eslora;
 		int anoFabricacion, numMastiles = 0, potenciaEnCV = 0, numCamarotes = 0;
 
 		do {
@@ -72,7 +73,7 @@ public interface ServiceAlquileres {
 		System.out.println("Ingrese matricula: ");
 		matricula = leer.nextLine();
 		System.out.println("Ingrese eslora: ");
-		eslora = leer.nextLine();
+		eslora = leer.nextInt(); leer.nextLine();
 		System.out.println("Ingrese el año de fabricación: (AAAA)");
 		anoFabricacion = leer.nextInt();
 		leer.nextLine();
@@ -176,6 +177,8 @@ public interface ServiceAlquileres {
 			}
 			
 		} while (true);
+		
+		
 		
 		listaAlquileres.add(alquiler);
 

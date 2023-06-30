@@ -4,7 +4,7 @@ public class YateLujo extends Barco {
 	
 	private int potenciaEnCV, numCamarotes;
 
-	public YateLujo(String matricula, String eslora, int anoFabricacion, int potenciaEnCV, int numCamarotes) {
+	public YateLujo(String matricula, int eslora, int anoFabricacion, int potenciaEnCV, int numCamarotes) {
 		super(matricula, eslora, anoFabricacion);
 		this.potenciaEnCV = potenciaEnCV;
 		this.numCamarotes = numCamarotes;

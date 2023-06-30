@@ -37,7 +37,7 @@ public class Alquiler {
 	
 	@SuppressWarnings("deprecation")
 	public void setFechaDev(int ano, int mes, int dia) {
-		this.fechaDev = new Date(ano-1900, mes-1, dia+1);
+		this.fechaDev = new Date(ano-1900, mes-1, dia);
 		this.fechaDev.setHours(fechaAlq.getHours());
 		this.fechaDev.setMinutes(fechaAlq.getMinutes());
 		this.fechaDev.setSeconds(fechaAlq.getSeconds());
@@ -56,7 +56,7 @@ public class Alquiler {
 		return barco;
 	}
 	
-	public void setBarco(String tipo, String matricula, String eslora, int anoFabricacion, int numMastiles, int potenciaEnCV, int numCamarotes) {
+	public void setBarco(String tipo, String matricula, int eslora, int anoFabricacion, int numMastiles, int potenciaEnCV, int numCamarotes) {
 		
 		if (tipo.equalsIgnoreCase("velero")) {
 			

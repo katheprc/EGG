@@ -2,10 +2,10 @@ package Ejercicio1.Entity;
 
 public class Barco {
 	
-	private String matricula, eslora;
-	private int anoFabricacion;
+	private String matricula;
+	private int eslora, anoFabricacion;
 		
-	public Barco(String matricula, String eslora, int anoFabricacion) {
+	public Barco(String matricula, int eslora, int anoFabricacion) {
 		this.matricula = matricula;
 		this.eslora = eslora;
 		this.anoFabricacion = anoFabricacion;
@@ -19,11 +19,11 @@ public class Barco {
 		this.matricula = matricula;
 	}
 	
-	public String getEslora() {
+	public int getEslora() {
 		return eslora;
 	}
 	
-	public void setEslora(String eslora) {
+	public void setEslora(int eslora) {
 		this.eslora = eslora;
 	}
 	

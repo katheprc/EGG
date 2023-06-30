@@ -4,7 +4,7 @@ public class A_Motor extends Barco{
 
 	private int potenciaEnCV;
 	
-	public A_Motor(String matricula, String eslora, int anoFabricacion, int potenciaEnCV) {
+	public A_Motor(String matricula, int eslora, int anoFabricacion, int potenciaEnCV) {
 		super(matricula, eslora, anoFabricacion);
 		this.potenciaEnCV = potenciaEnCV;
 	}
