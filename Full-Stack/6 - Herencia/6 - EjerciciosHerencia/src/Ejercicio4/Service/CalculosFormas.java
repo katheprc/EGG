@@ -70,7 +70,7 @@ public interface CalculosFormas {
 		
 		for (Circulo circulo : listaCirculos) {
 			
-			System.out.println("Circulo " + (listaCirculos.indexOf(circulo)+1 + ". Perímetro = " + (Math.PI*circulo.getDiametro() + ". Area = " + (Math.PI*circulo.getRadio()*circulo.getRadio()))));
+			System.out.println("Circulo " + (listaCirculos.indexOf(circulo)+1 + " || Radio = " + circulo.getRadio() + ". || Diametro = " + circulo.getDiametro() + ". Perímetro = " + (Math.PI*circulo.getDiametro() + ". Area = " + (Math.PI*circulo.getRadio()*circulo.getRadio()))));
 			
 		}
 		
@@ -78,7 +78,7 @@ public interface CalculosFormas {
 		
 		for (Rectangulo rectangulo : listaRectangulos) {
 			
-			System.out.println("Rectangulo " + (listaRectangulos.indexOf(rectangulo)+1) + ". Perímetro = " + ((rectangulo.getAltura()+rectangulo.getBase())*2) + ". Area = " + (rectangulo.getAltura()*rectangulo.getBase()));
+			System.out.println("Rectangulo " + (listaRectangulos.indexOf(rectangulo)+1) + ". || Base =  " + rectangulo.getBase() + ". || Altura = " + rectangulo.getAltura() + ". Perímetro = " + ((rectangulo.getAltura()+rectangulo.getBase())*2) + ". Area = " + (rectangulo.getAltura()*rectangulo.getBase()));
 			
 		}
 		
