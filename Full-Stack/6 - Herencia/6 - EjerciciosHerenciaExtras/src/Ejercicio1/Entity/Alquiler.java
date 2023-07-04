@@ -9,7 +9,7 @@ public class Alquiler {
 	Date fechaAlq = new Date(), fechaDev;
 	int posAmarre;
 	Barco barco;
-	int diasTotal;
+	int diasTotal, precioTotal;
 	
 	public String getNombre() {
 		return nombre;
@@ -84,6 +84,25 @@ public class Alquiler {
 	public void getDiferenciaDias(Date d1, Date d2) {
 	    long dif = Math.abs(d1.getTime() - d2.getTime());
 	    this.diasTotal = (int) TimeUnit.DAYS.convert(dif, TimeUnit.MILLISECONDS);
+	}
+	
+	public int getModulo(){
+		return this.barco.getEslora()*10;
+	}
+	
+	public void calcularTotal() {
+		
+		if (this.barco instanceof Velero) {
+			Velero barco1 = (Velero) this.barco;
+			this.precioTotal = (this.diasTotal * (getModulo() + barco1.getNumMastiles()));
+		} else if(this.barco instanceof YateLujo) {
+			YateLujo barco1 = (YateLujo) this.barco;
+			this.precioTotal = (this.diasTotal* (getModulo() + barco1.getPotenciaEnCV()) + barco1.getNumCamarotes());
+		} else {
+			A_Motor barco1 = (A_Motor) this.barco;
+			this.precioTotal = (this.diasTotal* (getModulo() + barco1.getPotenciaEnCV()));
+		}
+		
 	}
 
 	@Override

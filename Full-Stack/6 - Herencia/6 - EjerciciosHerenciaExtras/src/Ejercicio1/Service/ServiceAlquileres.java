@@ -178,7 +178,7 @@ public interface ServiceAlquileres {
 			
 		} while (true);
 		
-		
+		alquiler.calcularTotal();
 		
 		listaAlquileres.add(alquiler);
 
