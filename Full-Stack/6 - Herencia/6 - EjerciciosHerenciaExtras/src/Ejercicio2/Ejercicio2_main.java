@@ -1,5 +1,13 @@
 package Ejercicio2;
 
-public class Ejercicio2_main {
+import Ejercicio2.Service.*;
 
+public class Ejercicio2_main {
+	
+	public static void main(String[] args) {
+	
+		ServiceEdificios.menu();
+		
+	}
+	
 }
