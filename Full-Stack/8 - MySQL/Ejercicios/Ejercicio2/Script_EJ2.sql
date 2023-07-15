@@ -95,9 +95,14 @@ select distinct forma_pago from pago;
 /* 15. Devuelve un listado con todos los productos que pertenecen a la gama Ornamentales y que tienen más de 100 unidades en stock. El listado deberá
 estar ordenado por su precio de venta, mostrando en primer lugar los de mayor precio. */
 
+select * from producto where gama like 'Ornamentales' and cantidad_en_stock >= 100 order by precio_venta desc;
+
 
 
 /* 16. Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30. */
+
+select * from cliente where ciudad like 'Madrid' and (codigo_empleado_rep_ventas = 11 or codigo_empleado_rep_ventas = 30);
+
 
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -107,21 +112,43 @@ estar ordenado por su precio de venta, mostrando en primer lugar los de mayor pr
 
 /* 1. Obtén un listado con el nombre de cada cliente y el nombre y apellido de su representante de ventas. */
 
+select nombre_cliente, codigo_empleado_rep_ventas, nombre, apellido1 from cliente 
+inner join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado ;
+
 
 
 /* 2. Muestra el nombre de los clientes que hayan realizado pagos junto con el nombre de sus representantes de ventas. */
 
+select distinct cliente.codigo_cliente, nombre_cliente, codigo_empleado_rep_ventas, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante from cliente
+inner join empleado ON cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
+inner join pago ON cliente.codigo_cliente  = pago.codigo_cliente;
+
 
 /* 3. Muestra el nombre de los clientes que no hayan realizado pagos junto con el nombre de sus representantes de ventas. */
+
+select cliente.codigo_cliente, nombre_cliente, codigo_empleado_rep_ventas, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante from cliente
+inner join empleado ON cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
+where cliente.codigo_cliente not in (select pago.codigo_cliente from pago);
+
 
 
 /* 4. Devuelve el nombre de los clientes que han hecho pagos y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el
 representante. */
 
+select distinct cliente.codigo_cliente, nombre_cliente, codigo_empleado_rep_ventas, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante, empleado.codigo_oficina, oficina.ciudad from cliente
+inner join empleado ON cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
+inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
+inner join pago ON cliente.codigo_cliente  = pago.codigo_cliente;
+
 
 
 /* 5. Devuelve el nombre de los clientes que no hayan hecho pagos y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece
 el representante. */
+
+select cliente.codigo_cliente, nombre_cliente, codigo_empleado_rep_ventas, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante, empleado.codigo_oficina, oficina.ciudad from cliente
+inner join empleado on cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
+inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
+where cliente.codigo_cliente not in (select pago.codigo_cliente from pago);
 
 
 
@@ -129,7 +156,12 @@ el representante. */
 
 
 
+
 /* 7. Devuelve el nombre de los clientes y el nombre de sus representantes junto con la ciudad de la oficina a la que pertenece el representante. */
+
+select distinct nombre_cliente, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante, oficina.ciudad from cliente
+inner join empleado ON cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
+inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
 
 
 
