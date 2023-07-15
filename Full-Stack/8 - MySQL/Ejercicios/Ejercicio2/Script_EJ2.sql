@@ -154,6 +154,9 @@ where cliente.codigo_cliente not in (select pago.codigo_cliente from pago);
 
 /* 6. Lista la dirección de las oficinas que tengan clientes en Fuenlabrada. */
 
+select oficina.linea_direccion1 from oficina
+inner join empleado on oficina.codigo_oficina = empleado.codigo_oficina 
+inner join cliente on empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas where cliente.ciudad like "Fuenlabrada";
 
 
 
@@ -167,13 +170,26 @@ inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
 
 /* 8. Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes. */
 
+select empleado.nombre, empleado.codigo_jefe, e.nombre from empleado 
+inner join empleado e on empleado.codigo_jefe = e.codigo_empleado ;
+
 
 
 /* 9. Devuelve el nombre de los clientes a los que no se les ha entregado a tiempo un pedido. */
 
+select nombre_cliente, pedido.fecha_esperada, pedido.fecha_entrega from cliente
+inner join pedido on cliente.codigo_cliente = pedido.codigo_cliente where estado like "entregado" and (((month(fecha_esperada) < month(fecha_entrega)) or ((month(fecha_esperada) = month(fecha_entrega)) and (day(fecha_esperada) < day(fecha_entrega)))))
+
 
 
 /* 10. Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente. */
+
+select distinct cliente.codigo_cliente, cliente.nombre_cliente, producto.gama from cliente
+inner join pedido on cliente.codigo_cliente = pedido.codigo_cliente 
+inner join detalle_pedido on pedido.codigo_pedido = detalle_pedido.codigo_pedido 
+inner join producto on detalle_pedido.codigo_producto = producto.codigo_producto ;
+
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -182,39 +198,76 @@ inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
 
 /* 1. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago. */
 
+select distinct cliente.codigo_cliente, cliente.nombre_cliente from cliente
+left join pago on cliente.codigo_cliente = pago.codigo_cliente where pago.codigo_cliente is null; 
+
+
 
 /* 2. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pedido. */
+
+select distinct *from cliente
+left join pedido on cliente.codigo_cliente = pedido.codigo_cliente where pedido.codigo_cliente is null; 
+
 
 
 /* 3. Devuelve un listado que muestre los clientes que no han realizado ningún pago y los que no han realizado ningún pedido. */
 
+select distinct * from cliente
+left join pago on cliente.codigo_cliente = pago.codigo_cliente
+left join pedido on cliente.codigo_cliente = pedido.codigo_cliente where pedido.codigo_cliente is null and pago.codigo_cliente is null; 
+
+
 
 /* 4. Devuelve un listado que muestre solamente los empleados que no tienen una oficina asociada. */
+
+select * from empleado 
+left join oficina on empleado.codigo_oficina = oficina.codigo_oficina where empleado.codigo_oficina is null;
 
 
 
 /* 5. Devuelve un listado que muestre solamente los empleados que no tienen un cliente asociado. */
 
+select * from empleado 
+left join cliente on cliente.codigo_empleado_rep_ventas = codigo_empleado where codigo_empleado_rep_ventas is null;
+
 
 
 /* 6. Devuelve un listado que muestre los empleados que no tienen una oficina asociada y los que no tienen un cliente asociado. */
+
+select * from empleado 
+left join oficina on empleado.codigo_oficina = oficina.codigo_oficina 
+left join cliente on cliente.codigo_empleado_rep_ventas = codigo_empleado where codigo_empleado_rep_ventas is null or empleado.codigo_oficina is null;
 
 
 
 /* 7. Devuelve un listado de los productos que nunca han aparecido en un pedido. */
 
+select distinct * from producto
+left join detalle_pedido on producto.codigo_producto = detalle_pedido.codigo_producto where detalle_pedido.codigo_producto is null;
 
+ 
 
 /* 8. Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido los representantes de ventas de algún cliente que haya realizado
 la compra de algún producto de la gama Frutales. */
 
 
 
+
+
 /* 9. Devuelve un listado con los clientes que han realizado algún pedido, pero no han realizado ningún pago. */
+
+select distinct * from cliente
+left join pedido on cliente.codigo_cliente = pedido.codigo_cliente 
+left join pago on cliente.codigo_cliente = pago.codigo_cliente where ((pedido.codigo_cliente is not null) and (pago.codigo_cliente is null))
 
 
 
 /* 10. Devuelve un listado con los datos de los empleados que no tienen clientes asociados y el nombre de su jefe asociado. */
+
+select empleado.*, e.nombre from empleado
+left join cliente on empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas 
+inner join empleado e on empleado.codigo_jefe = e.codigo_empleado where codigo_empleado_rep_ventas is null;
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
