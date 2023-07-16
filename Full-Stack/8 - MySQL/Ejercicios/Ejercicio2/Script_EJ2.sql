@@ -250,7 +250,14 @@ left join detalle_pedido on producto.codigo_producto = detalle_pedido.codigo_pro
 /* 8. Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido los representantes de ventas de algún cliente que haya realizado
 la compra de algún producto de la gama Frutales. */
 
-
+select distinct oficina.codigo_oficina, oficina.ciudad, oficina.pais, gama_producto.gama from oficina
+left join empleado on oficina.codigo_oficina = empleado.codigo_oficina
+left join cliente on empleado.codigo_empleado = cliente.codigo_empleado_rep_ventas
+left join pedido on cliente.codigo_cliente = pedido.codigo_cliente
+left join detalle_pedido on pedido.codigo_pedido = detalle_pedido.codigo_pedido
+left join producto on detalle_pedido.codigo_producto = producto.codigo_producto
+left join gama_producto on producto.gama = gama_producto.gama
+where gama_producto.gama is null or gama_producto.gama != 'Frutales'
 
 
 
@@ -258,7 +265,7 @@ la compra de algún producto de la gama Frutales. */
 
 select distinct * from cliente
 left join pedido on cliente.codigo_cliente = pedido.codigo_cliente 
-left join pago on cliente.codigo_cliente = pago.codigo_cliente where ((pedido.codigo_cliente is not null) and (pago.codigo_cliente is null))
+left join pago on cliente.codigo_cliente = pago.codigo_cliente where ((pedido.codigo_cliente is not null) and (pago.codigo_cliente is null));
 
 
 
@@ -275,11 +282,13 @@ inner join empleado e on empleado.codigo_jefe = e.codigo_empleado where codigo_e
 
 /* 1. ¿Cuántos empleados hay en la compañía? */
 
+select count(*) as CantEmpleados from empleado;
 
 
 
 /* 2. ¿Cuántos clientes tiene cada país? */
 
+select pais, COUNT(*) as cantidad_clientes from cliente group by pais;
 
 
 
