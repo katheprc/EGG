@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS jardineria;
-CREATE DATABASE jardineria CHARACTER SET utf8mb4;
-USE jardineria;
+DROP DATABASE IF EXISTS eggmysqlej2extra;
+CREATE DATABASE eggmysqlej2extra CHARACTER SET utf8mb4;
+USE eggmysqlej2extra;
 
 CREATE TABLE oficina (
   codigo_oficina VARCHAR(10) NOT NULL,

@@ -1,8 +1,8 @@
 #creamos la base de datos
-CREATE DATABASE IF NOT EXISTS nba;
+CREATE DATABASE IF NOT EXISTS eggmysqlej1extra;
 
 #seleccionar la base de datos
-USE nba;
+USE eggmysqlej1extra;
 
 
 CREATE TABLE IF NOT EXISTS equipos (

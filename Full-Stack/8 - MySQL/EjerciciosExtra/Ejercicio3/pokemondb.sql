@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS pokemondb;
+CREATE DATABASE IF NOT EXISTS eggmysqlej3extra;
 
-use pokemondb;
+use eggmysqlej3extra;
 
 /*Borrado de tablas*/
 
