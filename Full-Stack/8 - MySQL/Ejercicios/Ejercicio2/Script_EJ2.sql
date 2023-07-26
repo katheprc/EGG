@@ -223,9 +223,21 @@ where codigo in (select distinct codigo_fabricante from producto);
 /*2. Devuelve los nombres de los fabricantes que no tienen productos asociados. (Utilizando*/
 /*IN o NOT IN).*/
 
--
+select nombre from fabricante f 
+where f.codigo not in (select p.codigo_fabricante  from producto p);
+
 
 
 /*Subconsultas (En la cláusula HAVING)*/
 /*1. Devuelve un listado con todos los nombres de los fabricantes que tienen el mismo número*/
 /*de productos que el fabricante Lenovo.*/
+
+SELECT f2.nombre
+FROM fabricante f1
+JOIN fabricante f2 ON f1.codigo <> f2.codigo
+JOIN producto p1 ON f1.codigo = p1.codigo_fabricante
+JOIN producto p2 ON f2.codigo = p2.codigo_fabricante
+WHERE f1.nombre = 'Lenovo'
+GROUP BY f2.nombre
+HAVING COUNT(DISTINCT p1.codigo) = COUNT(DISTINCT p2.codigo);
+
