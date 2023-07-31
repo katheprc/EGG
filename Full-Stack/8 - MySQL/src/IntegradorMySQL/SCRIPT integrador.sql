@@ -61,12 +61,19 @@ Para obtener el siguiente código deberás redondear hacia abajo el resultado qu
 sumar: el promedio de puntos por partido, el conteo de asistencias por partido, y la suma de
 tapones por partido. Además, este resultado debe ser, donde la división sea central*/
 
-select floor(avg(Puntos_por_partido) + sum(Asistencias_por_partido) + sum(Tapones_por_partido)) as resultado from estadisticas es
+/*select floor(avg(Puntos_por_partido) + sum(Asistencias_por_partido) + sum(Tapones_por_partido)) as resultado from estadisticas es
 inner join jugadores j on j.codigo = es.jugador 
 inner join equipos eq on j.Nombre_equipo = eq.Nombre 
-where eq.Division like 'central';
+where eq.Division = "Central";*/
+/*resultado 1038 */   
 
-/*resultado 1038*/
+
+select floor(avg(Puntos_por_partido) + count(Asistencias_por_partido) + sum(Tapones_por_partido)) as resultado from estadisticas es
+inner join jugadores j on j.codigo = es.jugador 
+inner join equipos eq on j.Nombre_equipo = eq.Nombre 
+where eq.Division = "Central";
+
+/*resultado 631*/
 
 
 

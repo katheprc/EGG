@@ -64,6 +64,8 @@ public class Ejercicio2_main {
 		System.out.println("Lista de razas: ");
 		razas.forEach(System.out::println); 
 		
+		
+		
 		System.out.println("");System.out.println("");System.out.println("");
 		System.out.println("Ingrese una raza: ");
 	

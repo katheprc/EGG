@@ -5,7 +5,6 @@
 select codigo_oficina, ciudad from oficina;
 
 
-
 /* 2. Devuelve un listado con la ciudad y el teléfono de las oficinas de España.*/
 
 select ciudad, telefono from oficina where pais like "España";
@@ -21,6 +20,8 @@ select nombre, apellido1, email from empleado where codigo_jefe = 7;
 /* 4. Devuelve el nombre del puesto, nombre, apellidos y email del jefe de la empresa.*/
 
 select puesto, nombre, apellido1, apellido2, email from empleado where puesto like "Director General" ;
+
+select puesto, nombre, apellido1, apellido2, email from empleado where codigo_jefe is null ;
 
 
 
@@ -50,6 +51,10 @@ Tenga en cuenta que deberá eliminar aquellos códigos de cliente que aparezcan 
 	
 select distinct codigo_cliente from pago where year(fecha_pago) = 2008;
 
+select distinct codigo_cliente from pago where date_format(fecha_pago, "%Y") = 2008;
+
+select distinct codigo_cliente from pago where fecha_pago like '2008%';
+
 
 	
 /* 9. Devuelve un listado con el código de pedido, código de cliente, fecha esperada y fecha de entrega de los pedidos
@@ -63,7 +68,9 @@ select codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega from pedido 
 cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.
 	o Utilizando la función ADDDATE de MySQL.
 	o Utilizando la función DATEDIFF de MySQL.*/
-	
+
+select codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega from pedido where adddate(fecha_esperada, interval -2 day) >= fecha_entrega  ;
+
 select codigo_pedido, codigo_cliente, fecha_esperada, fecha_entrega from pedido where datediff(fecha_esperada, fecha_entrega) >= 2 ;
 
 
@@ -76,13 +83,13 @@ select * from pedido where estado like 'Rechazado' and year(fecha_pedido) = 2009
 
 /* 12. Devuelve un listado de todos los pedidos que han sido entregados en el mes de enero de cualquier año.*/
 
-select * from pedido where estado like 'Entregado' and month(fecha_pedido) = 01;
+select * from pedido where estado like 'Entregado' and month(fecha_entrega) = 01;
 
 
 
 /* 13. Devuelve un listado con todos los pagos que se realizaron en el año 2008 mediante Paypal.Ordene el resultado de mayor a menor.*/
 
-select * from pago where forma_pago like "Paypal" and year(fecha_pago) = 2008 order by fecha_pago ;
+select * from pago where forma_pago like "Paypal" and year(fecha_pago) = 2008 order by total desc ;
 
 
 
@@ -122,6 +129,7 @@ inner join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empl
 select distinct cliente.codigo_cliente, nombre_cliente, codigo_empleado_rep_ventas, nombre as NombreRepresentante, apellido1 as ApellidoRepresentante from cliente
 inner join empleado ON cliente.codigo_empleado_rep_ventas  = empleado.codigo_empleado
 inner join pago ON cliente.codigo_cliente  = pago.codigo_cliente;
+
 
 
 /* 3. Muestra el nombre de los clientes que no hayan realizado pagos junto con el nombre de sus representantes de ventas. */
@@ -171,7 +179,7 @@ inner join oficina on  empleado.codigo_oficina = oficina.codigo_oficina
 /* 8. Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes. */
 
 select empleado.nombre, empleado.codigo_jefe, e.nombre from empleado 
-inner join empleado e on empleado.codigo_jefe = e.codigo_empleado ;
+inner join empleado e on empleado.codigo_jefe = e.codigo_empleado order by codigo_jefe ;
 
 
 
@@ -245,7 +253,7 @@ left join cliente on cliente.codigo_empleado_rep_ventas = codigo_empleado where 
 select distinct * from producto
 left join detalle_pedido on producto.codigo_producto = detalle_pedido.codigo_producto where detalle_pedido.codigo_producto is null;
 
- 
+
 
 /* 8. Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido los representantes de ventas de algún cliente que haya realizado
 la compra de algún producto de la gama Frutales. */
@@ -276,6 +284,7 @@ left join cliente on empleado.codigo_empleado = cliente.codigo_empleado_rep_vent
 inner join empleado e on empleado.codigo_jefe = e.codigo_empleado where codigo_empleado_rep_ventas is null;
 
 
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Consultas resumen */
@@ -295,7 +304,7 @@ group by pais;
 
 /* 3. ¿Cuál fue el pago medio en 2009? */
 
-select avg(total) from pago 
+select round(avg(total)) as PagoMedio$ from pago 
 where year(fecha_pago) = 2009;
 
 
@@ -335,7 +344,7 @@ select ciudad, count(*) from cliente where ciudad like "m%" group by ciudad;
 /* 9. Devuelve el nombre de los representantes de ventas y el número de clientes al que atiende cada uno. */
 
 select empleado.codigo_empleado as ID, empleado.nombre, count(*) as CantClientes from cliente 
-inner join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado 
+left join empleado on cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado 
 group by codigo_empleado_rep_ventas  
 order by CantClientes desc;
 
@@ -356,7 +365,7 @@ select codigo_cliente, min(fecha_pago) as PrimerPago, max(fecha_pago) as UltimoP
 
 /* 12. Calcula el número de productos diferentes que hay en cada uno de los pedidos. */
 
-select codigo_pedido, count(codigo_producto) from detalle_pedido group by codigo_pedido ;
+select codigo_pedido,  count(distinct codigo_producto) from detalle_pedido group by codigo_pedido ;
 
 
 
@@ -410,11 +419,13 @@ JOIN producto ON detalle_pedido.codigo_producto = producto.codigo_producto GROUP
 
 /* 1. Devuelve el nombre del cliente con mayor límite de crédito. */
 
-
+select * from cliente where limite_credito = (select max(limite_credito) from cliente);
 
 
 
 /* 2. Devuelve el nombre del producto que tenga el precio de venta más caro. */
+
+select * from producto where precio_venta = (select max(precio_venta) from producto);
 
 
 
@@ -422,9 +433,14 @@ JOIN producto ON detalle_pedido.codigo_producto = producto.codigo_producto GROUP
 unidades que se han vendido de cada producto a partir de los datos de la tabla detalle_pedido. Una vez que sepa cuál es el código del producto, 
 puede obtener su nombre fácilmente.) */
 
+select nombre from producto p
+inner join detalle_pedido dp = on p.codigo_producto = dp.codigo_producto 
+where p.count(*) = v c
+
 
 
 /* 4. Los clientes cuyo límite de crédito sea mayor que los pagos que haya realizado. (Sin utilizar INNER JOIN). */
+
 
 
 
