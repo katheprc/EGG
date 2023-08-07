@@ -1,8 +1,5 @@
 package Ejercicio1.Persistence;
 
-public class DAO {
+public class ProductoDAO {
 
-	
-	
-	
 }
