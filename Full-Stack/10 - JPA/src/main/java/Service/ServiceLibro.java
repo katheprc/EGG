@@ -3,6 +3,7 @@ package Service;
 import java.util.*;
 
 import Entity.*;
+import Persistence.*;
 
 public class ServiceLibro {
 
@@ -12,6 +13,12 @@ public class ServiceLibro {
 	ServiceEditorial srvEditorial = new ServiceEditorial();
 	
 	HashMap<Long, Libro> listaLibros = new HashMap<>(); 
+	
+	LibroDAO libroDao = new LibroDAO();
+	
+	EditorialDAO ediDao = new EditorialDAO();
+	
+	AutorDAO autoDao = new AutorDAO();
 	
 	public void crearLibro() {
 		
@@ -37,14 +44,17 @@ public class ServiceLibro {
 		System.out.println("Ingrese nombre del autor");
 		String nombreAutor = leer.nextLine();
 		Autor autor = new Autor(nombreAutor, true);
+		autoDao.guardardao(autor);
 		
 		System.out.println("Ingrese nombre de editorial");
 		String nombreEditorial = leer.nextLine();
 		Editorial editorial = new Editorial(nombreEditorial, true);
+		ediDao.guardardao(editorial);
 		
 		Libro libro = new Libro(isbn, titulo, ano, ejemplares, ejemplaresPrestados, ejemplaresRestantes, alta, autor, editorial);
 		
 		listaLibros.put(isbn, libro);
+		libroDao.guardardao(libro);
 		
 	}
 	

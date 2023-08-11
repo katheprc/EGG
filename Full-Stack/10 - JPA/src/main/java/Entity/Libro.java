@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Libro {
 	@Id
-	private long isbn;
+	private long isbn = 0;
 	private String titulo;
 	private int ano, ejemplares, ejemplaresPrestados, ejemplaresRestantes;
 	boolean alta;

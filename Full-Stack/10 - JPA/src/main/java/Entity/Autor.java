@@ -3,22 +3,24 @@ package Entity;
 import javax.persistence.*;
 
 @Entity
-public class Editorial {
-	
+public class Autor {
+
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	int id;
 	String nombre;
 	boolean alta;
-	public Editorial() {
-	}
 	
-	public Editorial(int id, String nombre, boolean alta) {
+	public Autor() {
+	}
+
+	public Autor(int id, String nombre, boolean alta) {
 		this.id = id;
 		this.nombre = nombre;
 		this.alta = alta;
 	}
-	
-	public Editorial(String nombre, boolean alta) {
+
+	public Autor(String nombre, boolean alta) {
 		this.nombre = nombre;
 		this.alta = alta;
 	}
@@ -49,9 +51,7 @@ public class Editorial {
 
 	@Override
 	public String toString() {
-		return "Editorial [id=" + id + ", nombre=" + nombre + ", alta=" + alta + "]";
+		return "Autor [id=" + id + ", nombre=" + nombre + ", alta=" + alta + "]";
 	}
-	
-	
 	
 }

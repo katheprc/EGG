@@ -13,7 +13,7 @@ public abstract class DAO<T> {
 	// Esta clase padre nos permite heredar métodos comunes con el fin de reutilizar
 	// código.
 
-	protected final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("persistence");
+	protected final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("10-JPAe");
 	protected EntityManager em = EMF.createEntityManager();
 
 	// Este método nos permite conectar con la base de datos
