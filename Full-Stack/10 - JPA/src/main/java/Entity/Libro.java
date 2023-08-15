@@ -8,9 +8,14 @@ public class Libro {
 	private long isbn = 0;
 	private String titulo;
 	private int ano, ejemplares, ejemplaresPrestados, ejemplaresRestantes;
-	boolean alta;
-	Autor autor;
-	Editorial editorial;
+	private boolean alta;
+	
+	//claves foraneas
+	private Autor autor;
+	private Editorial editorial;
+	
+	
+	
 	public Libro() {
 	}
 	
