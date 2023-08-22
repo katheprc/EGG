@@ -7,18 +7,18 @@ public class Cine {
 	ArrayList<Pelicula> listaPelis = new ArrayList<>();
 
 	ArrayList<Sala> listaSalas = new ArrayList<>();
-	
+
 	Scanner leer = new Scanner(System.in);
-	
+
 	int precio = 100;
 
 	public Cine() {
-		
+
 		adicionarSala();
 		adicionarPeli();
-		
+
 	}
-	
+
 	public int getPrecio() {
 		return precio;
 	}
@@ -113,18 +113,19 @@ public class Cine {
 	}
 
 	public int verUnaSala() {
-		
+
 		verListaPelis();
-		
+
 		System.out.println("Ingrese el nombre de la película");
 		String nombre = leer.nextLine().toUpperCase();
 		boolean encontrado = false;
-		
+
 		for (Sala sala : listaSalas) {
 
 			if (sala.getPelicula().getTitulo().equals(nombre)) {
 				System.out.println("- - - - - - - - - - - - - - - - -");
-				System.out.println("Sala: " + (listaSalas.indexOf(sala) + 1) + " (" + sala.getPelicula().getTitulo() + ") ");
+				System.out.println(
+						"Sala: " + (listaSalas.indexOf(sala) + 1) + " (" + sala.getPelicula().getTitulo() + ") ");
 				sala.mostrarSala();
 				System.out.println("- - - - - - - - - - - - - - - - -");
 				encontrado = true;
@@ -132,37 +133,40 @@ public class Cine {
 			}
 
 		}
-		
+
 		if (encontrado == false) {
 			System.out.println("Película no encontrada.");
 		}
-		
+
 		return -1;
 
 	}
-	
+
 	public void ingresarPersona() {
-		
+
 		Espectador espectador = new Espectador();
-		
+
 		System.out.println("Ingrese el nombre de la persona: ");
 		espectador.setNombre(leer.nextLine());
-		
+
 		System.out.println("Ingrese edad de la persona: ");
-		espectador.setEdad(leer.nextInt()); leer.nextLine();
-		
+		espectador.setEdad(leer.nextInt());
+		leer.nextLine();
+
 		System.out.println("Ingrese dinero de la persona: ");
-		espectador.setDinero(leer.nextInt()); leer.nextLine();
-		
+		espectador.setDinero(leer.nextInt());
+		leer.nextLine();
+
 		int sala1 = verUnaSala();
-		
+
 		if (sala1 != -1) {
-			if (espectador.getEdad() >= listaSalas.get(sala1).getPelicula().getEdadmin() && espectador.getDinero() >= precio) {
+			if (espectador.getEdad() >= listaSalas.get(sala1).getPelicula().getEdadmin()
+					&& espectador.getDinero() >= precio) {
 				listaSalas.get(sala1).asignarAsiento();
 			} else {
 				System.out.println("La persona no tiene el dinero o la edad suficiente");
 			}
-		} 
-		
+		}
+
 	}
 }

@@ -6,11 +6,9 @@ public class Pelicula {
 	int edadmin;
 	
 	public Pelicula() {
-		super();
 	}
 	
 	public Pelicula(String titulo, String director, String duración, int edadmin) {
-		super();
 		this.titulo = titulo;
 		this.director = director;
 		this.duración = duración;

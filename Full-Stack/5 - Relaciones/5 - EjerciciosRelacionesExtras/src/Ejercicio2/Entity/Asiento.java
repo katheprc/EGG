@@ -58,7 +58,5 @@ public class Asiento {
 	public String toString() {
 		return (fila + columna + ocupado2);
 	}
-	
-	
 
 }
