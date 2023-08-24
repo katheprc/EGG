@@ -11,9 +11,7 @@ public class ServiceLibro {
 	
 	ServiceAutor srvAutor = new ServiceAutor();
 	ServiceEditorial srvEditorial = new ServiceEditorial();
-	
-	HashMap<Long, Libro> listaLibros = new HashMap<>(); 
-	
+
 	LibroDAO libroDao = new LibroDAO();
 	
 	EditorialDAO ediDao = new EditorialDAO();
@@ -53,7 +51,6 @@ public class ServiceLibro {
 		
 		Libro libro = new Libro(isbn, titulo, ano, ejemplares, ejemplaresPrestados, ejemplaresRestantes, alta, autor, editorial);
 		
-		listaLibros.put(isbn, libro);
 		libroDao.guardardao(libro);
 		
 	}
