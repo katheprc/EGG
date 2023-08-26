@@ -1,0 +1,28 @@
+body h1{
+    color: cadetblue;
+}
+
+.especial, #especial{
+    color: blueviolet;
+}
+
+body h2, body p em{
+    color: blue;
+}
+
+body p a, tbody tr th, tfoot tr th, body p strong{
+    color: red;
+}
+
+
+thead .especial, tbody .especial, tbody tr td strong, .destacado{
+    color: coral;
+}
+
+div p{
+    color: darkseagreen;
+}
+
+tbody tr td, #adicional p a{
+color: darkgreen;
+}
