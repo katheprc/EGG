@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--Usar Bootstrap para mostrar una tabla de productos así: *imagen*-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EjercicioE1</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <h3>Lista de lo que aprendimos hasta hoy</h3>
+        <ul style="list-style-type: square">
+            <li>Java</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <br>
+        <h3>Lista de páginas a elección</h3>
+        <ul>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.youtube.com">YouTube</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+        </ul>
+
+    </body>
+
+</html>
