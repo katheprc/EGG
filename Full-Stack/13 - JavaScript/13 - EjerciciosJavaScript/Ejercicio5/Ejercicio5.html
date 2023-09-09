@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio5</title>
+    </head>
+
+    <body>
+        <script>
+            /*Construir un programa que simule un menú de opciones para realizar las cuatro
+            operaciones aritméticas básicas (suma, resta, multiplicación y división) con dos valores
+            numéricos enteros. El usuario, además, debe especificar la operación con el primer
+            carácter de la operación que desea realizar: ‘S' o ‘s’ para la suma, ‘R’ o ‘r’ para la resta, ‘M’
+            o ‘m’ para la multiplicación y ‘D’ o ‘d’ para la división.*/
+            do {
+                var letra = prompt("Ingrese la inicial de la operación deseada S/R/M/D");
+                var primer, segundo;
+                switch (letra) {
+                    case "S":
+                        primer = prompt("Ingrese el primer número a sumar: ");
+                        segundo = prompt("Ingrese el segundo número a sumar: ");
+                        alert("La suma " + primer + " + " + segundo + " es: " + (parseInt(primer) + parseInt(segundo)));
+                        break;
+
+                    case "s":
+                        primer = prompt("Ingrese el primer número a sumar: ");
+                        segundo = prompt("Ingrese el segundo número a sumar: ");
+                        alert("La suma " + primer + " + " + segundo + " es: " + (parseInt(primer) + parseInt(segundo)));
+                        break;
+
+                    case "R":
+                        primer = prompt("Ingrese el primer número a restar: ");
+                        segundo = prompt("Ingrese el segundo número a restar: ");
+                        alert("La resta " + primer + " - " + segundo + " es: " + (parseInt(primer) - parseInt(segundo)));
+                        break;
+
+                    case "r":
+                        primer = prompt("Ingrese el primer número a restar: ");
+                        segundo = prompt("Ingrese el segundo número a restar: ");
+                        alert("La resta " + primer + " - " + segundo + " es: " + (parseInt(primer) - parseInt(segundo)));
+                        break;
+
+                    case "M":
+                        primer = prompt("Ingrese el primer número a multiplicar: ");
+                        segundo = prompt("Ingrese el segundo número a multiplicar: ");
+                        alert("La multiplicacion " + primer + " * " + segundo + " es: " + (parseInt(primer) * parseInt(segundo)));
+                        break;
+
+                    case "m":
+                        primer = prompt("Ingrese el primer número a multiplicar: ");
+                        segundo = prompt("Ingrese el segundo número a multiplicar: ");
+                        alert("La multiplicacion " + primer + " * " + segundo + " es: " + (parseInt(primer) * parseInt(segundo)));
+                        break;
+
+                    case "D":
+                        primer = prompt("Ingrese el primer número a dividir: ");
+                        segundo = prompt("Ingrese el segundo número a dividir: ");
+                        alert("La division " + primer + " / " + segundo + " es: " + (parseInt(primer) / parseInt(segundo)));
+                        break;
+
+                    case "d":
+                        primer = prompt("Ingrese el primer número a dividir: ");
+                        segundo = prompt("Ingrese el segundo número a dividir: ");
+                        alert("La division " + primer + " / " + segundo + " es: " + (parseInt(primer) / parseInt(segundo)));
+                        break;
+
+                    default: alert("LETRA INCORRECTA");
+                }
+            } while (true);
+
+        </script>
+    </body>
+
+</html>
