@@ -3,8 +3,8 @@
 * Programming fundamentals
 * Algorithmic logic
 * Mathematical logical thinking
-  
-<br>
+
+
 
 ## Full-Stack | [Repository](https://github.com/katheprc/EGG/tree/main/Full-Stack) 
 #### Java with Eclipse IDE and NetBeans IDE | SQL with MySQL Workbench | HTML, CSS & JS with Visual Studio Code
