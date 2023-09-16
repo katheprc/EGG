@@ -7,7 +7,7 @@
 
 
 ## Full-Stack | [Repository](https://github.com/katheprc/EGG/tree/main/Full-Stack) 
-#### Java with Eclipse IDE and NetBeans IDE | SQL with MySQL Workbench | HTML, CSS & JS with Visual Studio Code | Spring with Spring Tool Suite 4 (Eclipse)
+#### Java with Eclipse IDE and NetBeans IDE | SQL with MySQL Workbench | HTML, CSS & JS with Visual Studio Code | Spring Framework with Spring Tool Suite 4 (Eclipse)
 * [Git & Github I](https://github.com/katheprc/EGG/tree/main/Full-Stack/1%20-%20Git%20%26%20Github%20I)
 * [Java basics](https://github.com/katheprc/EGG/tree/main/Full-Stack/2%20-%20Java) (45 practical exercises)
 * [Java OOP](https://github.com/katheprc/EGG/tree/main/Full-Stack/3%20-%20POO) (27 practical exercises)
