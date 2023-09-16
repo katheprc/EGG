@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio8</title>
+    </head>
+
+    <body>
+        <script>
+            /*Escribir  un  programa  que  lea  números  enteros  hasta  teclear  0  (cero).  Al  finalizar  el
+            programa se debe mostrar el máximo número ingresado, el mínimo, y el promedio de 
+            todos ellos.*/
+            var num = parseInt(prompt("Ingrese números. 0 para salir"));
+            var suma = num, mayor = num, menor = num, aux = 1;
+            
+            while(num != 0){
+
+                num = parseInt(prompt("Ingrese números. 0 para salir"));
+                if(num > mayor && num !=0 && num != NaN){
+                    mayor = num;
+                    suma = suma + num;
+                    aux++;
+                } else if (num < menor  && num !=0 && num != NaN){
+                    menor = num;
+                    suma = suma + num;
+                    aux++;
+                } else if (num !=0 && num != NaN){
+                    aux++;
+                    suma = suma + num;
+                }
+
+            }
+
+            alert("El mayor es: " + mayor + ". El menor es: " + menor + ". El promedio es: " + (suma/aux));
+
+
+        </script>
+
+    </body>
+
+</html>
