@@ -18,9 +18,9 @@ import com.katheprc.biblioteca.service.LibraryService;
 public class AuthorController {
 
 	@Autowired
-	private LibraryService LService = new LibraryService();
+	private LibraryService LService;
 
-	@GetMapping("/SignUp")
+	@GetMapping("/")
 	public String SignUp() {
 		return "author_form.html";
 	}
@@ -31,11 +31,11 @@ public class AuthorController {
 		try {
 			LService.createAuthor(name);
 		} catch (MyException e) {
-			e.printStackTrace();
+			Logger.getLogger(AuthorController.class.getName()).log(Level.SEVERE, null, e);
 			return "author_form.html";
 		}
-
 		return "index.html";
+		
 
 	}
 }
