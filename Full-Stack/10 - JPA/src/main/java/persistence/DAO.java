@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public abstract class DAO<T> {
 
-	protected final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("10-JPAe");
+	protected final EntityManagerFactory EMF = Persistence.createEntityManagerFactory("PU");
 	protected EntityManager em = EMF.createEntityManager();
 
 	protected void conectar() {

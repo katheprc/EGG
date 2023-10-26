@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio1_news</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<h1>GUARDAR NOTICIAS</h1>
+	<form action="/guardar" method="POST">
+		<input type="text" name="title" placeholder="Titulo">
+		<input type="text" name="body" placeholder="Cuerpo">
+		<button type="submit">Enviar</button>
+	</form>
+
+
+	<h1>ELIMINAR NOTICIAS</h1>
+	<form action="/eliminar" method="POST">
+		<input type="text" name="title" placeholder="Titulo">
+		<button type="submit">Enviar</button>
+	</form>
+
+	<br><br>
+	<a href="/listar"><button>Listar noticias</button></a>
+	<table border="1px">
+		<tr>
+			<th>
+				ID
+			</th>
+			<th>
+				Titulo
+			</th>
+			<th>
+				Cuerpo
+			</th>
+		</tr>
+		<tr th:each="news : ${listaNews}">
+			<td th:text="${news.id}"></td>
+			<td th:text="${news.title}"></td>
+			<td th:text="${news.body}"></td>
+		</tr>
+	</table>
+
+
+</body>
+
+</html>

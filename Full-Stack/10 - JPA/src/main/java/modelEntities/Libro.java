@@ -1,9 +1,13 @@
 package modelEntities;
 
-import javax.persistence.*;
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
-public class Libro {
+public class Libro implements Serializable {
+    private static final long serialVersionUID = 1L;
 	@Id
 	private long isbn = 0;
 	private String titulo;
